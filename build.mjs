@@ -64,7 +64,6 @@ const organization = {
   description: pages.get('/').description,
   url: absolute('/'),
   logo: absolute(logo),
-  telephone: site.telephone,
   email: site.email,
   vatID: site.vat,
   address: {
@@ -138,7 +137,7 @@ function header(page) {
 
 function contactDetails() {
   return `<address><strong>${escape(site.name)}</strong><br>${escape(site.street)}<br>${escape(site.postalCode)} ${escape(site.city)}, ${escape(site.country)}</address>
-<ul class="contact-links"><li>${link(site.email, 'mailto:' + site.email)}</li><li>${link(site.phone, 'tel:' + site.telephone)}</li><li>Btw ${escape(site.vat)}</li></ul>`;
+<ul class="contact-links"><li>${link(site.email, 'mailto:' + site.email)}</li><li>Btw ${escape(site.vat)}</li></ul>`;
 }
 
 function footer() {
